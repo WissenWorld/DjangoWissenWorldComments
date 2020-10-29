@@ -11,4 +11,6 @@ class Comment(models.Model):
     parent = models.ForeignKey('self',on_delete=models.CASCADE,null=True,blank=True)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     date = models.DateTimeField(default=now)
+    date_modified = models.DateTimeField(default=now)
+    date_created = models.DateTimeField(default=now)
     
